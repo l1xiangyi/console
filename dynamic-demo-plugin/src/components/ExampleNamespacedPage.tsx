@@ -43,9 +43,12 @@ export const ExampleNamespacedPage: React.FC<ExampleNamespacedPageProps> = ({ ma
   const { ns } = match?.params;
   const activeNamespace = ns || 'all-namespaces';
 
+  const logNamespaceChange = (namespace) => console.log(`New namespace: ${namespace}`)
+  const children = React.createElement('h1', { className: 'header' }, 'This is React')
+
   return (
     <>
-      <NamespaceBar />
+      <NamespaceBar onNamespaceChange={logNamespaceChange} isDisabled={false} children={children}/>
       <NamespacePageContent namespace={activeNamespace} />
     </>
   );

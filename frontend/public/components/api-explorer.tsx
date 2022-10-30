@@ -768,7 +768,13 @@ const APIResourcePage_ = ({
         breadcrumbs={breadcrumbs}
         detail
       />
-      <HorizontalNav pages={pages} match={match} customData={{ kindObj, namespace }} noStatusBox />
+      <HorizontalNav
+        contextId="api-explore"
+        pages={pages}
+        match={match}
+        customData={{ kindObj, namespace }}
+        noStatusBox
+      />
     </>
   );
 };

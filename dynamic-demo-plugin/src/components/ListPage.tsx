@@ -14,6 +14,7 @@ import {
   ResourceLink,
   ResourceIcon,
   TableColumn,
+  YAMLEditor
 } from '@openshift-console/dynamic-plugin-sdk';
 
 const columns: TableColumn<K8sResourceCommon>[] = [
@@ -116,6 +117,7 @@ const ListPage = () => {
           loadError={loadError}
         />
       </ListPageBody>
+      <YAMLEditor value='testing' minHeight='100px' showShortcuts />
       <ListPageBody>
         <p>Sample ResourceIcon</p>
         <ResourceIcon kind="Pod" />

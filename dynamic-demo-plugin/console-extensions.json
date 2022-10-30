@@ -405,5 +405,21 @@
       "name": "%plugin__console-demo-plugin~Example Namespaced Page%",
       "href": "/example-namespaced-page"
     }
+  },
+  {
+    "type": "console.action/provider",
+    "properties": {
+      "contextId": "core~v1~Pod",
+      "provider": {"$codeRef": "useActionsExtension.default"}
+    }
+  },
+  {
+    "type": "console.tab",
+    "properties": {
+      "contextId": "api-explore",
+      "name": "Xiangyi Demo Logs",
+      "href": "/xianyi-demo-logs",
+      "component": {"$codeRef": "exampleNavs.DynamicPage1"}
+    }
   }
 ]
