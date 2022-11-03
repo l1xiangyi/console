@@ -137,7 +137,8 @@ const retryRolloutAction = (
     disabled:
       obj.spec.paused ||
       obj.status.latestVersion === 0 ||
-      replicationController?.metadata.annotations['openshift.io/deployment.phase'] !== 'Failed',
+      replicationController?.metadata.annotations['openshift.io/deployment.phase'] !== 'Failed' ||
+      replicationController?.metadata.annotations['openshift.io/deployment.cancelled'] === 'true',
     disabledTooltip:
       'This action is only enabled when the latest revision of the ReplicationController resource is in a failed state.',
     accessReview: {
